@@ -1,0 +1,14 @@
+.home {
+    background-color: aqua;
+    background-image: url(./images/back.jpg);
+    background-repeat: no-repeat;  
+    background-size: cover;
+}
+.content{
+    position: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
