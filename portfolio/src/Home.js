@@ -1,22 +1,26 @@
 import React from 'react';
-import './comp.css';
-import back from './images/back.jpg';
+import Header from './components/header';
+import Portfolio from './components/Portfolio';
+import Resume from './components/Resume';
+import Aboutme from './components/about';
+import Blog from './components/blog';
+import Contactme from './components/contact';
+import Footer from './components/footer';
 
 
 function Home() {
   return (
-    <div styles={{backgroundImage:`url(${back})`}}>
-        <header className="content">
-            <p>
-                Hi,<br></br>
-                Join me as I briefly narrate my career journey 
-            </p>
-        </header>
-        <div className="button">
-
-        </div>
-      
-    </div>
+     <div className= "portfolio">
+		 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
+			 <Header/>
+			 <Portfolio/>
+			 <Resume />
+			 <Aboutme/>
+			 <Blog/>
+			 <Contactme/>
+			 <Footer/>
+         </body>
+	 </div> 
   );
 }
 
