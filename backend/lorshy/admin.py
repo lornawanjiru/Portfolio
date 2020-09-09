@@ -1,8 +1,8 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Contact
-from .models import Blog
+from .models import contact
+from .models import blog
 
-admin.site.register(Contact)
-admin.site.register(Blog)
+admin.site.register(contact)
+admin.site.register(blog)

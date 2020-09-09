@@ -5,8 +5,9 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
+    path('',include('lorshy.api.urls')),
     path('api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
-    path('',include('lorshy.api.urls')),
+    
 ]
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
