@@ -3,7 +3,7 @@ import Header from './components/header';
 import Portfolio from './components/Portfolio';
 import Resume from './components/Resume';
 import Aboutme from './components/about';
-import Blog from './components/blog';
+import Bloglist from './container/bloglist';
 import Contactme from './components/contact';
 import Footer from './components/footer';
 
@@ -16,7 +16,7 @@ function Home() {
 			 <Portfolio/>
 			 <Resume />
 			 <Aboutme/>
-			 <Blog/>
+			 <Bloglist/>
 			 <Contactme/>
 			 <Footer/>
          </body>

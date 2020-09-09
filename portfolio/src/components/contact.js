@@ -2,8 +2,10 @@ import React from 'react';
 
 
 
-function Contactme() {
-  return (
+class Contactme extends React.Component {
+	
+  render(){
+    return (
      <div className= "Contact">
       <section class="site-section" id="section-contact">
         <div class="container">
@@ -62,5 +64,5 @@ function Contactme() {
      </div> 
   );
 }
-
+}
 export default Contactme;

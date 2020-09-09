@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-function Blog() {
+const Blog = (props) => {
   return (
      <div className= "Blog">
          <section class="site-section" id="section-blog">
@@ -20,7 +20,7 @@ function Blog() {
 					<div class="blog-entry">
 						<a href="#"><img src="assets/images/post_1.jpg" alt="" class="img-fluid"/></a>
 						<div class="blog-entry-text">
-							<h3><a href="#">Creative Product Designer From Facebook</a></h3>
+                           <h3><a href="#">{props.children}</a></h3>
 							<p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
 
 							<div class="meta">
@@ -31,35 +31,6 @@ function Blog() {
 					</div>
 				</div>
 
-				<div class="col-sm-6 col-lg-4 mb-4">
-					<div class="blog-entry">
-						<a href="#"><img src="assets/images/post_2.jpg" alt="" class="img-fluid"/></a>
-						<div class="blog-entry-text">
-							<h3><a href="#">Creative Product Designer From Facebook</a></h3>
-							<p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-
-							<div class="meta">
-								<a href="#"><span class="icon-calendar"></span> Aug 7, 2018</a>
-								<a href="#"><span class="icon-bubble"></span> 5 Comments</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-lg-4 mb-4">
-					<div class="blog-entry">
-						<a href="#"><img src="assets/images/post_3.jpg" alt="" class="img-fluid"/></a>
-						<div class="blog-entry-text">
-							<h3><a href="#">Creative Product Designer From Facebook</a></h3>
-							<p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-
-							<div class="meta">
-								<a href="#"><span class="icon-calendar"></span> Aug 7, 2018</a>
-								<a href="#"><span class="icon-bubble"></span> 5 Comments</a>
-							</div>
-						</div>
-					</div>
-				</div>
 
 			</div>
 		</div>
