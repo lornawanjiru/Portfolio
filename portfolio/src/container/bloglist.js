@@ -1,27 +1,17 @@
-import React from 'react';
-import Blog from '../components/blog';
-import axios from 'axios';
+import React, { useState } from 'react';
 
-class Bloglist extends React.Component  {
-  
-    state = {
-		blogs: []
-	}
 
-	componentDidMount(){
-		  axios.get('http://127.0.0.1:8000/api/')
-		   .then(res =>{
-			   this.setState({
-				   blogs: res.data
-			   });
-			   console.log(res.data);
-		   })
-		   
-	}
-    render(){
-  return (
-     <Blog data={this.state.blogs} />
- );
+const Bloglist = (props) => {
+
+    return (
+        <div className="ui list">
+			
+            {props.blogs && props.blogs.map(blog => (
+                <div className="item" key={blog}>
+                    {blog}
+                </div>  
+            ))}}
+        </div>
+    )
 }
-}
-export default Bloglist;
+export default Bloglist

@@ -7,6 +7,7 @@ import Blog from './components/blog';
 import Contactme from './components/contact';
 import Footer from './components/footer';
 import axios from 'axios';
+import Bloglist from './container/bloglist';
 
 class Home extends React.Component{
 	state = {
@@ -31,7 +32,7 @@ class Home extends React.Component{
 			 <Portfolio />
 			 <Resume  />
 			 <Aboutme />
-			 <Blog data={this.state.blogs}/>
+			 <Blog/>
 			 <Contactme />
 			 <Footer/>
          </body>
