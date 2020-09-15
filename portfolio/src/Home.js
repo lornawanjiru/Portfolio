@@ -8,22 +8,10 @@ import Contactme from './components/contact';
 import Footer from './components/footer';
 import axios from 'axios';
 import Bloglist from './container/bloglist';
+import Blogcard from './container/blogcard';
 
 class Home extends React.Component{
-	state = {
-		blogs: [],
-	}
-
-	componentDidMount(){
-		  axios.get('http://127.0.0.1:8000/')
-		   .then(res =>{
-			   this.setState({
-				   blogs: res.data
-			   });
-			   console.log(res.data);
-		   })
-		   
-	}
+	
     render(){
   return (
      <div className= "portfolio">
@@ -32,7 +20,7 @@ class Home extends React.Component{
 			 <Portfolio />
 			 <Resume  />
 			 <Aboutme />
-			 <Blog/>
+			 <Blogcard/>
 			 <Contactme />
 			 <Footer/>
          </body>

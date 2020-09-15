@@ -1,37 +1,38 @@
 import React, {useState,useEffect} from 'react';
 import Blogcard from '../container/blogcard';
-import projects from '../apis/project';
+import bloginfo from '../apis/blog';
 
 
-const Blog = () => {
+const Blog = (props) => {
 	 
-	const [blog,setblog] = useState([]);
+	const [blogs,setblog] = useState([]);
 
-	const fetchblog  = async () =>{
-        const response = await projects.get('/projects/')
+	const fetchBlog  = async () =>{
+        const response = await bloginfo.get('blog/')
         setblog(response.data)
     }
-    const createBlogCard = () => {
+const createBlogcard = () => {
   return (
      <div className= "Blog">
-         <section class="site-section" id="section-blog">
-		<div class="container">
+         <section className= "site-section" id="section-blog">
+		<div className= "container">
 			
-			{blog.map(blog => {
+			{blogs.map(blogss => {
 
-				if(!blog){
+				if(!blogss){
 					return <div>Loading..</div>
 
 				} else { 
 					return( 
 
-					<div class="row">
+					<div className= "row">
 						
 							<Blogcard 
-							   Title={blog.Title}
-							   Desc={blog.Desc}
-							   Image={blog.Image}
-							   Date={blog.Date} />
+							   Title={blogss.Title}
+							   Desc={blogss.Desc}							   
+							   Date={blogss.Date} 
+							   Image={blogss.Image}
+							   />
 
 					</div>
 					)
@@ -43,18 +44,18 @@ const Blog = () => {
   );
   }
   useEffect(()=>{
-	fetchblog()
+	fetchBlog()
 },[])
 return (
 	<>
-		<div class="row">
-				<div class="col-md-12 mb-5">
-					<div class="section-heading text-center">
+		<div className= "row">
+				<div className= "col-md-12 mb-5">
+					<div className= "section-heading text-center">
 						<h2>Blog on <strong>Medium</strong></h2>
 					</div>
 				</div>
 		</div> 
-		{createBlogCard()}
+		{createBlogcard()}
 	</>
 )
 }

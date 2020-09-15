@@ -7,51 +7,51 @@ class Contactme extends React.Component {
   render(){
     return (
      <div className= "Contact">
-      <section class="site-section" id="section-contact">
-        <div class="container">
-           <div class="row">
-                <div class="col-md-12 mb-5">
-					<div class="section-heading text-center">
+      <section className= "site-section" id="section-contact">
+        <div className= "container">
+           <div className= "row">
+                <div className= "col-md-12 mb-5">
+					<div className= "section-heading text-center">
 						<h2><strong>Get In Touch</strong></h2>
 					</div>
 				</div>
-                <div class="col-md-7 mb-5 mb-md-0">
-					<form action="" class="site-form">
-						<h3 class="mb-5">Get In Touch</h3>
-						<div class="form-group">
-							<input type="text" class="form-control px-3 py-4" placeholder="Your Name"/>
+                <div className= "col-md-7 mb-5 mb-md-0">
+					<form action="" className= "site-form">
+						<h3 className= "mb-5">Get In Touch</h3>
+						<div className= "form-group">
+							<input type="text" className= "form-control px-3 py-4" placeholder="Your Name"/>
 						</div>
-						<div class="form-group">
-							<input type="email" class="form-control px-3 py-4" placeholder="Your Email"/>
+						<div className= "form-group">
+							<input type="email" className= "form-control px-3 py-4" placeholder="Your Email"/>
 						</div>
-						<div class="form-group">
-							<input type="email" class="form-control px-3 py-4" placeholder="Your Phone"/>
+						<div className= "form-group">
+							<input type="email" className= "form-control px-3 py-4" placeholder="Your Phone"/>
 						</div>
-						<div class="form-group mb-5">
-							<textarea class="form-control px-3 py-4"cols="30" rows="10" placeholder="Write a Message"></textarea>
+						<div className= "form-group mb-5">
+							<textarea className= "form-control px-3 py-4"cols="30" rows="10" placeholder="Write a Message"></textarea>
 						</div>
-						<div class="form-group">
-							<input type="submit" class="btn btn-primary  px-4 py-3" value="Send Message"/>
+						<div className= "form-group">
+							<input type="submit" className= "btn btn-primary  px-4 py-3" value="Send Message"/>
 						</div>
 					</form>
 				</div>
-                <div class="col-md-5 pl-md-5">
-					<h3 class="mb-5">My Contact Details</h3>
-					<ul class="site-contact-details">
+                <div className= "col-md-5 pl-md-5">
+					<h3 className= "mb-5">My Contact Details</h3>
+					<ul className= "site-contact-details">
 						<li>
-							<span class="text-uppercase">Email</span>
+							<span className= "text-uppercase">Email</span>
 							lornamuchangi@gmail.com
 						</li>
 						<li>
-							<span class="text-uppercase">Phone</span>
+							<span className= "text-uppercase">Phone</span>
 							+245 717426148
 						</li>
 						<li>
-							<span class="text-uppercase">Site</span>
+							<span className= "text-uppercase">Site</span>
 							myportfolio.com
 						</li>
 						<li>
-							<span class="text-uppercase">Address</span>
+							<span className= "text-uppercase">Address</span>
 							Kenya, Nairobi <br></br>
 							51476 - 00200  <br></br>
 							
