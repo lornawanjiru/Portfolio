@@ -20,7 +20,8 @@ class Home extends React.Component{
 			 <Portfolio />
 			 <Resume  />
 			 <Aboutme />
-			 <Blogcard/>
+			 <Blog/>
+			 {/* <Blogcard/> */}
 			 <Contactme />
 			 <Footer/>
          </body>
