@@ -6,7 +6,7 @@ const Blogcard = (props) => {
     return (
         <div className= "col-sm-6 col-lg-4 mb-4">
         <div className= "blog-entry">
-		    <a href="#"><img src= "assets/images/post_2.jpg"alt="" className= "img-fluid"/></a>
+		    <a href="#"><img src= {props.Image}alt="" className= "img-fluid"/></a>
                <div className= "blog-entry-text">
 							
 				<h3><a href="#">{props.Title}</a></h3>

@@ -23,7 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '749-ui4$9y))^sb&(fd)%1nwn%80)-d)frdcm^p&0bg1s76o%*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+
+
+EMAIL_HOST = 'smtp.zoho.com'
+EMAIL_HOST_USER = '*'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = '587'
+EMAIL_USE_TLS = 'True'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 ALLOWED_HOSTS = ['*']
 
@@ -122,9 +130,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+import os 
 
 STATIC_URL = '/static/'
-import os 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
+
+
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')

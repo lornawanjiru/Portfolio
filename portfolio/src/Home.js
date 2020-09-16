@@ -6,9 +6,9 @@ import Aboutme from './components/about';
 import Blog from './components/blog';
 import Contactme from './components/contact';
 import Footer from './components/footer';
-import axios from 'axios';
-import Bloglist from './container/bloglist';
-import Blogcard from './container/blogcard';
+
+
+
 
 class Home extends React.Component{
 	
@@ -20,7 +20,7 @@ class Home extends React.Component{
 			 <Portfolio />
 			 <Resume  />
 			 <Aboutme />
-			 <Blogcard/>
+			 <Blog/>			 
 			 <Contactme />
 			 <Footer/>
          </body>

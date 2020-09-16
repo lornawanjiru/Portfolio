@@ -3,7 +3,7 @@ import Blogcard from '../container/blogcard';
 import bloginfo from '../apis/blog';
 
 
-const Blog = (props) => {
+const Blog = () => {
 	 
 	const [blogs,setblog] = useState([]);
 
@@ -14,9 +14,10 @@ const Blog = (props) => {
 const createBlogcard = () => {
   return (
      <div className= "Blog">
-         <section className= "site-section" id="section-blog">
-		<div className= "container">
-			
+     <section className= "site-section" id="section-blog">
+		<div className= "container">		
+		<div className= "row  ">
+				
 			{blogs.map(blogss => {
 
 				if(!blogss){
@@ -25,7 +26,7 @@ const createBlogcard = () => {
 				} else { 
 					return( 
 
-					<div className= "row">
+					
 						
 							<Blogcard 
 							   Title={blogss.Title}
@@ -34,10 +35,13 @@ const createBlogcard = () => {
 							   Image={blogss.Image}
 							   />
 
-					</div>
+					
 					)
 				}
 			})}
+			
+		</div>
+		
 		</div>
 	</section>
      </div> 
@@ -55,7 +59,9 @@ return (
 					</div>
 				</div>
 		</div> 
+		
 		{createBlogcard()}
+		
 	</>
 )
 }
