@@ -1,13 +1,20 @@
-import React, {useState} from 'react';
-import {useForm} from 'react-hook-form';
+import React from 'react';
+import emailjs from 'emailjs-com';
 
 
 function Contactme() {
-	const {register, handleSubmit} = useForm();
 
-	const onSubmit = (data) => {
-		console.log(data)
-	}
+		function sendEmail(e) {
+			e.preventDefault();
+
+			emailjs.sendForm('gmail', 'template_blyx66q', e.target, 'user_BJqoDD4bZ6O0THfFsaHWF')
+			.then((result) => {
+				console.log(result.text);
+			}, (error) => {
+				console.log(error.text);
+			});
+			e.target.reset()
+		}
 
     return (
      <div className= "Contact">
@@ -20,20 +27,20 @@ function Contactme() {
 					</div>
 				</div>
                 <div className= "col-md-7 mb-5 mb-md-0">
-					<form onSubmit={handleSubmit(onSubmit)} action="" className= "site-form">
+					<form onSubmit={sendEmail} method="POST" className= "site-form">
 						
 						<h3 className= "mb-5">Get In Touch</h3>
 						<div className= "form-group">
-							<input type="text" className= "form-control px-3 py-4" placeholder="Your Name" name="name" ref={register}/>
+							<input type="text" className= "form-control px-3 py-4" placeholder="Your Name" name="name" />
 						</div>
 						<div className= "form-group">
-							<input type="email" className= "form-control px-3 py-4" placeholder="Your Email" name="email" ref={register}/>
+							<input type="email" className= "form-control px-3 py-4" placeholder="Your Email" name="email" />
 						</div>
 						<div className= "form-group">
-							<input type="text" className= "form-control px-3 py-4" placeholder="Your Phone" name="phone" ref={register} />
+							<input type="text" className= "form-control px-3 py-4" placeholder="Your Phone" name="phone" />
 						</div>
 						<div className= "form-group mb-5">
-							<textarea className= "form-control px-3 py-4"cols="30" rows="10" placeholder="Write a Message" name="desc" ref={register}></textarea>
+							<textarea className= "form-control px-3 py-4"cols="30" rows="10" placeholder="Write a Message" name="desc" ></textarea>
 						</div>
 						<div className= "form-group">
 							<input type="submit" className= "btn btn-primary  px-4 py-3" value="Send Message"/>

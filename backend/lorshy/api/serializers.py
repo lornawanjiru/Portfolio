@@ -12,6 +12,10 @@ class ContactSerializer(serializers.ModelSerializer):
         model = contact
         fields = ('Name','Email','Phone','Desc') 
 
+    def save(self):
+        contact.save()
+        return contact     
+
 class BlogSerializer(serializers.ModelSerializer):
     class Meta:
         model = blog

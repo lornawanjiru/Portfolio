@@ -11,12 +11,13 @@ from .serializers import *
      
 
 class ContactListView(ListAPIView):
-    queryset = contact.objects.all()
-    serializer_class = ContactSerializer
+        queryset = contact.objects.all()
+        serializer_class = ContactSerializer
 
-class ContactDetailView(RetrieveAPIView):
-    queryset = contact.objects.all()
-    serializer_class = ContactSerializer
+class ContactDetailView(RetrieveAPIView): 
+        queryset = contact.objects.all()
+        serializer_class = ContactSerializer
+
 
 class BlogListView(ListAPIView):
     queryset = blog.objects.all()
