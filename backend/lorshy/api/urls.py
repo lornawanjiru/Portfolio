@@ -3,6 +3,7 @@ from rest_framework import routers
 from .views import BlogDetailView, BlogListView
 from .views import *
 
+
 router = routers.DefaultRouter()
 urlpatterns = [
     path('portfolio/', portfwebListView.as_view()),
@@ -17,4 +18,5 @@ urlpatterns = [
     path('#section-net<pk>/', portfnetDetailView.as_view()),
     path('Aboutme/', AboutmeListView.as_view()),
     path('#section-about<pk>/', AboutmeDetailView.as_view()),
+    
 ]

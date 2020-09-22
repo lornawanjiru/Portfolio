@@ -5,9 +5,13 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
 from .serializers import *
+from django.http import HttpResponse
+from django.conf import settings
+from django.views.generic import View
 
-
-
+import logging
+import urllib.request
+import os
      
 
 class ContactListView(ListAPIView):
@@ -51,3 +55,20 @@ class AboutmeListView(ListAPIView):
 class AboutmeDetailView(RetrieveAPIView):
    queryset = Aboutme.objects.all()
    serializer_class = AboutmeSerializer
+
+class FrontendAppView(View):
+    def get(self, request):
+        print (os.path.join(settings.REACT_APP_DIR, 'build', 'index.html'))
+        try:
+            with open(os.path.join(settings.REACT_APP_DIR, 'build', 'index.html')) as f:
+                return HttpResponse(f.read())
+        except FileNotFoundError:
+            logging.exception('Production build of app not found')
+            return HttpResponse(
+                """
+                This URL is only used when you have built the production
+                version of the app. Visit http://localhost:3000/ instead, or
+                run `yarn run build` to test the production version.
+                """,
+                status=501,
+            )
