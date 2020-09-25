@@ -153,7 +153,7 @@ REST_FRAMEWORK = {
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-REACT_APP_DIR = os.path.join(BASE_DIR, 'portfolio') 
-STATICFILES_DIRS = [
-    os.path.join(REACT_APP_DIR, 'build', 'static'),
-]
+# REACT_APP_DIR = os.path.join(BASE_DIR, 'portfolio') 
+# STATICFILES_DIRS = [
+#     os.path.join(REACT_APP_DIR, 'build', 'static'),
+# ]
