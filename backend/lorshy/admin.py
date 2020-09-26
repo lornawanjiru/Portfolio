@@ -15,3 +15,4 @@ admin.site.register(portfweb)
 admin.site.register(portfcyb)
 admin.site.register(portfnet)
 admin.site.register(Aboutme)
+admin.site.site_header = 'Portfolio dashboard'

@@ -9,7 +9,7 @@ function Aboutme() {
 		<div className= "container">
 			<div className= "row mb-5 align-items-center">
 				<div className= "col-lg-7 pr-lg-5 mb-5 mb-lg-0">
-					<img src="assets/images/image_1.jpg" alt="" className= "img-fluid"/>
+					<img src="assets/images/me.png" alt="" className= "img-fluid"/>
 				</div>
 				<div className= "col-lg-5 pl-lg-5">
 					<div className= "section-heading">
